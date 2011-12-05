@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        id="http://role-project.eu/widgets/writethatthesis" 
+        version="1.0" 
+        height="500" 
+        width="420">
+	<name>Write That Thesis!</name>
+    <icon src="icon.png"/>
+	<description>Yes, we know you've got a lot to do but that thesis won't write itself so get a move on! Use this widget to track how you're progressing to that first draft</description>
+	<author>Li, Felix, Sten and Scott</author>
+</widget>

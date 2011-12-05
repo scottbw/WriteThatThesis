@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <link rel="stylesheet" href="lib/css/ui-lightness/jquery-ui-1.8.16.custom.css" />
+   <link rel="stylesheet" href="lib/jquery.mobile.min.css" />
+   <script src="lib/jquery.min.js"></script>
+   <script src="lib/jquery-ui-1.8.16.custom.min.js"></script>
+   <script src="jquery.ui.datepicker.js"></script>
+   <script src="lib/jquery.mobile.min.js"></script>
+   <script src="bluff/js-class.js"></script>
+   <script src="bluff/bluff-min.js"></script>
+   <script src="lib/date.format.js"></script>
+   <script src="script.js"></script>
+   <script src="visualization.js"></script>
+ </head>
+ 
+ <body onload="thesis_init();">
+ 
+  <div id="main" data-role="page">
+    <div id="header" data-role="header">
+      <h1>Write That Thesis!</h1>
+      <a href="#settings" data-rel="dialog" data-icon="gear" class="ui-btn-right">Settings</a>
+    </div>
+    
+    <div data-role="content">	
+      <div id="viz">
+				<canvas id="bluff_elem" width="400" height="300"></canvas>
+      </div>
+      <div id="write" style="display:inline;">
+        I wrote <input id="words" type="text" style="width:100px; display:inline;"> words!</input><button id="write_words_btn" data-inline="true" data-role="button" data-icon="check" style="display:inline;">OK</button> 
+      </div>
+	  <div id="message" style="vertical-align:middle;">Messages go here</div>
+	</div><!-- /content -->
+
+  </div>
+  
+  <div id="settings" data-role="dialog">
+     <div id="settings-header" data-role="header">
+       <h1>Settings</h1>
+     </div>
+     <div data-role="content">
+	 <div style="margin-left:auto; margin-right:auto; width:80%">
+     	<label for="word_count" style="padding-left:5px; vertical-align:middle;">Target word count:</label><input id="word_count" type="text"/>
+     	<label for="start_date" style="padding-left:5px; vertical-align:middle;">Start date:</label><input type="text" id="start_date"/>
+     	<label for="deadline" style="padding-left:5px; vertical-align:middle;">Deadline:</label><input type="text" id="deadline"/>
+	 </div>
+     <a onclick="saveSettings()" href="#main" data-role="button" data-transition="pop"  data-direction="reverse">OK</a> 
+    <a onclick="reset()" href="#main" data-role="button" data-transition="pop"  data-direction="reverse">Reset (clears everything!)</a>   
+     </div>
+  </div>
+ 
+ </body>
+ 
+</html>
